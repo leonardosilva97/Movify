@@ -8,6 +8,7 @@ App de descoberta e organização de filmes feito em React Native usando a API d
   <img src="./brend/Simulator Screenshot - iPhone 16 Pro - 2025-09-22 at 09.54.35.png" width="200" alt="Tela Home"/>
   <img src="./brend/Simulator Screenshot - iPhone 16 Pro - 2025-09-22 at 09.54.51.png" width="200" alt="Tela de Busca"/>
   <img src="./brend/Simulator Screenshot - iPhone 16 Pro - 2025-09-22 at 09.54.58.png" width="200" alt="Detalhes do Filme"/>
+  <br/>
   <img src="./brend/Simulator Screenshot - iPhone 16 Pro - 2025-09-22 at 09.55.30.png" width="200" alt="Tela de Favoritos"/>
   <img src="./brend/Simulator Screenshot - iPhone 16 Pro - 2025-09-22 at 09.55.40.png" width="200" alt="Streaming Providers"/>
 </div>
