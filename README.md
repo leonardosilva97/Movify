@@ -5,12 +5,14 @@ App de descoberta e organização de filmes feito em React Native usando a API d
 ## 📱 Screenshots
 
 <div align="center">
-  <img src="./brend/Simulator Screenshot - iPhone 16 Pro - 2025-09-22 at 09.54.35.png" width="200" alt="Tela Home"/>
-  <img src="./brend/Simulator Screenshot - iPhone 16 Pro - 2025-09-22 at 09.54.51.png" width="200" alt="Tela de Busca"/>
-  <img src="./brend/Simulator Screenshot - iPhone 16 Pro - 2025-09-22 at 09.54.58.png" width="200" alt="Detalhes do Filme"/>
+  <img src="./brend/Simulator Screenshot - iPhone 16 Pro - 2025-09-22 at 09.54.35.png" width="200" alt="Tela Home" style="margin: 10px;"/>
+  <img src="./brend/Simulator Screenshot - iPhone 16 Pro - 2025-09-22 at 09.54.51.png" width="200" alt="Tela de Busca" style="margin: 10px;"/>
+  <img src="./brend/Simulator Screenshot - iPhone 16 Pro - 2025-09-22 at 09.54.58.png" width="200" alt="Detalhes do Filme" style="margin: 10px;"/>
+  
   <br/>
-  <img src="./brend/Simulator Screenshot - iPhone 16 Pro - 2025-09-22 at 09.55.30.png" width="200" alt="Tela de Favoritos"/>
-  <img src="./brend/Simulator Screenshot - iPhone 16 Pro - 2025-09-22 at 09.55.40.png" width="200" alt="Streaming Providers"/>
+  
+  <img src="./brend/Simulator Screenshot - iPhone 16 Pro - 2025-09-22 at 09.55.30.png" width="200" alt="Tela de Favoritos" style="margin: 10px;"/>
+  <img src="./brend/Simulator Screenshot - iPhone 16 Pro - 2025-09-22 at 09.55.40.png" width="200" alt="Streaming Providers" style="margin: 10px;"/>
 </div>
 
 ## 📋 Pré-requisitos
