@@ -1,13 +1,10 @@
 import React from 'react';
-import {ScrollView, Image, Dimensions, FlatList} from 'react-native';
+import {ScrollView, Image, FlatList} from 'react-native';
 import {Screen, Box, Text, TouchableOpacityBox} from '../components';
 import {useAppTheme} from '../hooks';
 import {useQuery} from '@tanstack/react-query';
 import {tmdbService} from '../api/tmdbService';
-import {PersonDetails, PersonMovieCredits} from '../models/movie.api';
 import {formatDateToBrazilian, getYearFromDate} from '../utils/dateUtils';
-
-const {width} = Dimensions.get('window');
 
 interface ActorDetailsScreenProps {
   actorId: number;

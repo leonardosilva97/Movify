@@ -3,7 +3,7 @@ import {ScrollView} from 'react-native';
 import {Box, Text} from './index';
 import {RatingCard} from './RatingCard';
 import {useAppTheme} from '../hooks';
-import {formatDateToBrazilian, getYearFromDate} from '../utils/dateUtils';
+import {getYearFromDate} from '../utils/dateUtils';
 import {Movie, MovieDetails} from '../models/movie';
 
 interface MovieDetailsInfoProps {

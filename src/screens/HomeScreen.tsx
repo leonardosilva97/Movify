@@ -1,6 +1,6 @@
 import React from 'react';
-import {ScrollView, Image, Dimensions} from 'react-native';
-import {Box, Text, TouchableOpacityBox, Screen, MovieCarousel, TrailerCarousel} from '../components';
+import {ScrollView} from 'react-native';
+import {Box, Text, Screen, MovieCarousel, TrailerCarousel} from '../components';
 import {useAppTheme} from '../hooks/useAppTheme';
 import {useUpcomingMovies} from '../hooks/useUpcomingMovies';
 import {usePopularMovies} from '../hooks/useMovies';
@@ -10,8 +10,6 @@ import {StackNavigationProp} from '@react-navigation/stack';
 import {HomeStackParamList} from '../navigation/HomeStackNavigator';
 
 type HomeScreenNavigationProp = StackNavigationProp<HomeStackParamList, 'HomeMain'>;
-
-const {width: screenWidth} = Dimensions.get('window');
 
 export function HomeScreen() {
   const {spacing} = useAppTheme();

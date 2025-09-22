@@ -1,5 +1,5 @@
 import {create} from 'zustand';
-import {Movie, MovieDetails, MovieStatus, MovieStatusUpdate} from '../models/movie';
+import {Movie, MovieDetails, MovieStatusUpdate} from '../models/movie';
 import {movieService} from '../services/movieService';
 import {movieDatabase} from '../database/movieDatabase';
 
@@ -67,7 +67,7 @@ const enrichMoviesWithStatus = async (movies: Movie[]): Promise<Movie[]> => {
   return enrichedMovies;
 };
 
-export const useMoviesStore = create<MoviesState>((set, get) => ({
+export const useMoviesStore = create<MoviesState>((set, _get) => ({
   // Initial state
   popularMovies: [],
   searchResults: [],

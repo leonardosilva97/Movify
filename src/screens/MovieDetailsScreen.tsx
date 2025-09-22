@@ -29,7 +29,7 @@ interface MovieDetailsScreenProps {
 export function MovieDetailsScreen({movieId, onBack}: MovieDetailsScreenProps) {
   const navigation = useNavigation<StackNavigationProp<HomeStackParamList>>();
   const {data: movie, isLoading, error} = useMovieDetails(movieId);
-  const {data: movieExtras, isLoading: isLoadingExtras} = useMovieDetailsWithExtras(movieId);
+  const {data: movieExtras} = useMovieDetailsWithExtras(movieId);
   const {
     toggleWatched,
     scheduleWatchDate,

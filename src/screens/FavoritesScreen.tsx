@@ -16,6 +16,7 @@ import {FavoritesStackParamList} from '../navigation/FavoritesStackNavigator';
 export function FavoritesScreen() {
   const {colors, spacing} = useAppTheme();
   const navigation = useNavigation<StackNavigationProp<FavoritesStackParamList>>();
+  const { toggleFavorite } = useMovieStatus();
   const [favoriteMovies, setFavoriteMovies] = useState<Movie[]>([]);
   const [watchListMovies, setWatchListMovies] = useState<Movie[]>([]);
   const [activeTab, setActiveTab] = useState<'favorites' | 'watchlist'>('favorites');
@@ -166,7 +167,6 @@ export function FavoritesScreen() {
   };
 
   const handleFavoritePress = (movie: Movie) => {
-    const { toggleFavorite } = useMovieStatus();
     toggleFavorite(movie.id, movie.isFavorite || false);
   };
 
@@ -228,7 +228,7 @@ export function FavoritesScreen() {
   };
 
   const CategoryButton = ({
-    category,
+    category: _category,
     title,
     isActive,
     onPress,

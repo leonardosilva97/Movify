@@ -1,6 +1,5 @@
 import {useQuery} from '@tanstack/react-query';
 import {tmdbService} from '../api/tmdbService';
-import {MovieDetailsWithExtras} from '../models/movie.api';
 
 export const useMovieDetailsWithExtras = (movieId: number) => {
   return useQuery({

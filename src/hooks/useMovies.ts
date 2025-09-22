@@ -1,6 +1,5 @@
 import {useQuery, useInfiniteQuery} from '@tanstack/react-query';
 import {movieService} from '../services/movieService';
-import {Movie} from '../models/movie';
 import {movieDatabase} from '../database/movieDatabase';
 
 export const usePopularMovies = (page: number = 1) => {

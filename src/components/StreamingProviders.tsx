@@ -105,8 +105,7 @@ export function StreamingProviders({
 
       {/* Link para TMDB */}
       {watchProviders.link && (
-        <Box marginTop="s8">
-        </Box>
+        <Box marginTop="s8" />
       )}
     </Box>
   );

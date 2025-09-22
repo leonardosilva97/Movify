@@ -107,7 +107,7 @@ export function MovieDetailsActions({
       }
 
       // Seleciona um calendário editável (importante no Android)
-      let calendarId: string | undefined = undefined;
+      let calendarId: string | undefined;
       try {
         const calendars = await RNCalendarEvents.findCalendars();
         const writable = calendars.filter((c: any) => (c?.allowsModifications ?? true) || c?.isPrimary || c?.accessLevel === 'owner');

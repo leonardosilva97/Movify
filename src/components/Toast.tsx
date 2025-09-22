@@ -1,10 +1,8 @@
-import React, {useEffect, useRef} from 'react';
-import {Animated, Dimensions} from 'react-native';
+import React, {useEffect, useRef, useCallback} from 'react';
+import {Animated} from 'react-native';
 import {Box, Text} from './index';
 import {useAppTheme} from '../hooks/useAppTheme';
 import {Toast as ToastType} from '../store/useToastStore';
-
-const {width} = Dimensions.get('window');
 
 interface ToastProps {
   toast: ToastType;
@@ -15,6 +13,23 @@ export function Toast({toast, onHide}: ToastProps) {
   const {colors, spacing} = useAppTheme();
   const slideAnim = useRef(new Animated.Value(-100)).current;
   const opacityAnim = useRef(new Animated.Value(0)).current;
+
+  const hideToast = useCallback(() => {
+    Animated.parallel([
+      Animated.timing(slideAnim, {
+        toValue: -100,
+        duration: 300,
+        useNativeDriver: true,
+      }),
+      Animated.timing(opacityAnim, {
+        toValue: 0,
+        duration: 300,
+        useNativeDriver: true,
+      }),
+    ]).start(() => {
+      onHide(toast.id);
+    });
+  }, [slideAnim, opacityAnim, onHide, toast.id]);
 
   useEffect(() => {
     // Slide in animation
@@ -39,24 +54,7 @@ export function Toast({toast, onHide}: ToastProps) {
 
       return () => clearTimeout(timer);
     }
-  }, []);
-
-  const hideToast = () => {
-    Animated.parallel([
-      Animated.timing(slideAnim, {
-        toValue: -100,
-        duration: 300,
-        useNativeDriver: true,
-      }),
-      Animated.timing(opacityAnim, {
-        toValue: 0,
-        duration: 300,
-        useNativeDriver: true,
-      }),
-    ]).start(() => {
-      onHide(toast.id);
-    });
-  };
+  }, [hideToast, opacityAnim, slideAnim, toast.duration]);
 
   const getBackgroundColor = () => {
     switch (toast.type) {

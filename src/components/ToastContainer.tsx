@@ -7,7 +7,7 @@ export function ToastContainer() {
 
   return (
     <>
-      {toasts.map((toast, index) => (
+      {toasts.map((toast, _index) => (
         <Toast
           key={toast.id}
           toast={{

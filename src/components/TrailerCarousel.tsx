@@ -26,7 +26,7 @@ export function TrailerCarousel({
   const {colors, spacing} = useAppTheme();
   const scrollViewRef = useRef<ScrollView>(null);
   const fadeAnim = useRef(new Animated.Value(0)).current;
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [_currentIndex, setCurrentIndex] = useState(0);
 
   // Auto scroll effect
   useEffect(() => {

@@ -1,6 +1,5 @@
 import {useQuery} from '@tanstack/react-query';
 import {tmdbService} from '../api/tmdbService';
-import {Genre} from '../models/movie.api';
 
 export const useGenres = () => {
   return useQuery({
