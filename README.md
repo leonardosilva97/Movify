@@ -1,97 +1,166 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Movify 🎬
 
-# Getting Started
+App de descoberta e organização de filmes feito em React Native usando a API do The Movie Database (TMDB)
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+## 📱 Screenshots
 
-## Step 1: Start Metro
+<div align="center">
+  <img src="./brend/Simulator Screenshot - iPhone 16 Pro - 2025-09-22 at 09.54.35.png" width="200" alt="Tela Home"/>
+  <img src="./brend/Simulator Screenshot - iPhone 16 Pro - 2025-09-22 at 09.54.51.png" width="200" alt="Tela de Busca"/>
+  <img src="./brend/Simulator Screenshot - iPhone 16 Pro - 2025-09-22 at 09.54.58.png" width="200" alt="Detalhes do Filme"/>
+  <img src="./brend/Simulator Screenshot - iPhone 16 Pro - 2025-09-22 at 09.55.30.png" width="200" alt="Tela de Favoritos"/>
+  <img src="./brend/Simulator Screenshot - iPhone 16 Pro - 2025-09-22 at 09.55.40.png" width="200" alt="Streaming Providers"/>
+</div>
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+## 📋 Pré-requisitos
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+Será necessário o Node.js para executar o projeto em sua máquina
 
-```sh
-# Using npm
-npm start
+Consulte **`https://nodejs.org/en`** para saber sobre o Node
 
-# OR using Yarn
-yarn start
+```
+npm install
 ```
 
-## Step 2: Build and run your app
+### 🔧 Instalação
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+Depois de clonar ou fazer download do projeto, no terminal integrado digite...
 
-### Android
-
-```sh
-# Using npm
-npm run android
-
-# OR using Yarn
-yarn android
+```
+npm install
 ```
 
-### iOS
+em seguida:
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
 ```
-
-Then, and every time you update your native dependencies, run:
-
-```sh
-bundle exec pod install
-```
-
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
+# Para iOS
 npm run ios
 
-# OR using Yarn
-yarn ios
+# Para Android  
+npm run android
+
+# Ou inicie o Metro bundler
+npm start
 ```
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+Através de um emulador ou do seu próprio smartphone você já pode visualizar o projeto
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+## 🛠️ Construído com
 
-## Step 3: Modify your app
+### ✨ Principais Funcionalidades
 
-Now that you have successfully run the app, let's make changes!
+* 🎬 **Descoberta de Filmes** - Navegue por diferentes categorias (Populares, Em Cartaz, Mais Avaliados)
+* 🔍 **Busca Inteligente** - Pesquise filmes por título com scroll infinito e debounce
+* ❤️ **Sistema de Favoritos** - Adicione e remova filmes dos seus favoritos
+* 📅 **Agendamento de Filmes** - Agende filmes para assistir com integração ao calendário nativo
+* 🎭 **Lista "Quero Assistir"** - Organize filmes que pretende assistir
+* 📺 **Provedores de Streaming** - Veja onde assistir cada filme (Netflix, Prime Video, etc.)
+* 🎥 **Trailers** - Assista trailers dos filmes diretamente no app
+* 👥 **Elenco e Equipe** - Informações detalhadas sobre atores e diretores
+* 🔄 **Scroll Infinito** - Carregamento automático de mais conteúdo
+* 📱 **Pull to Refresh** - Atualize as listas puxando para baixo
+* 🌙 **Tema Escuro** - Interface moderna com design escuro
+* 💾 **Persistência Local** - Dados salvos localmente com SQLite
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+### 🚀 Tecnologias Utilizadas
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+Para a construção desse projeto, utilizei um conjunto poderoso de tecnologias, incluindo:
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+* ⚛️ **React Native** - Framework principal para desenvolvimento mobile multiplataforma
+* 📘 **TypeScript** - Tipagem estática para maior segurança e produtividade no desenvolvimento
+* 🧭 **React Navigation** - Navegação fluida entre telas com Stack e Bottom Tab Navigation
+* 🗄️ **SQLite** - Banco de dados local para persistir favoritos, status e agendamentos
+* 🐻 **Zustand** - Gerenciamento de estado global leve e eficiente
+* 🔄 **TanStack Query (React Query)** - Cache inteligente e sincronização de dados da API
+* 🌐 **Axios** - Cliente HTTP para consumo da API REST do TMDB
+* 📅 **React Native Calendar Events** - Integração com calendário nativo do dispositivo
+* 🗓️ **React Native Calendars** - Componente de calendário customizável
+* 📱 **React Native DateTimePicker** - Seletor de data e hora nativo
+* 🎨 **React Native Linear Gradient** - Gradientes para interface mais atraente
+* 🔔 **React Native Modal** - Modais nativos para melhor UX
+* 🎭 **React Native Vector Icons** - Ícones vetoriais (Lucide React Native)
+* 🏠 **AsyncStorage** - Armazenamento local assíncrono
+* 🔒 **React Native Dotenv** - Gerenciamento seguro de variáveis de ambiente
+* 🎯 **React Native Gesture Handler** - Gestos nativos otimizados
+* 🛡️ **React Native Safe Area Context** - Gerenciamento de áreas seguras
+* 📺 **React Native Screens** - Otimização de performance de navegação
 
-## Congratulations! :tada:
+### 🎯 Funcionalidades Avançadas
 
-You've successfully run and modified your React Native App. :partying_face:
+* 🔄 **Infinite Scroll** - Carregamento automático de mais filmes conforme o usuário navega
+* 🔍 **Debounced Search** - Busca otimizada com delay para melhor performance
+* 📱 **Deep Linking** - Abertura direta de apps de streaming quando disponível
+* 🎬 **Trailer Integration** - Reprodução de trailers com carrossel horizontal
+* 📊 **Status Management** - Sistema completo de status (Favorito, Assistido, Quero Assistir)
+* 🗓️ **Calendar Integration** - Agendamento de filmes com lembretes no calendário nativo
+* 🌍 **Streaming Providers** - Informações de onde assistir por região (Brasil)
+* 👤 **Actor Details** - Telas dedicadas para informações de atores
+* 🎨 **Custom Theme System** - Sistema de temas customizável com cores e espaçamentos
+* 📱 **Responsive Design** - Layout adaptativo para diferentes tamanhos de tela
+* ⚡ **Performance Optimized** - Memoização de componentes e lazy loading de imagens
 
-### Now what?
+## 🔧 Configuração da API
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
+O aplicativo utiliza a API v3 do TMDB. Você precisará de:
 
-# Troubleshooting
+1. Crie uma conta em **`https://www.themoviedb.org/`**
+2. Obtenha sua API Key
+3. Copie `.env.example` para `.env`
+4. Adicione sua API Key no arquivo `.env`:
 
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+```env
+TMDB_API_KEY=sua_api_key_aqui
+```
 
-# Learn More
+## 📊 Arquitetura do Projeto
 
-To learn more about React Native, take a look at the following resources:
+```
+src/
+├── api/           # Configuração da API do TMDB
+├── components/    # Componentes reutilizáveis (MovieCard, StreamingCard, etc.)
+├── database/      # Configuração do SQLite para persistência local
+├── hooks/         # Hooks customizados (useMovies, useInfiniteScroll, etc.)
+├── models/        # Tipos TypeScript e interfaces
+├── navigation/    # Configuração de navegação (Stack, Tab)
+├── screens/       # Telas do aplicativo (Home, Search, Favorites, MovieDetails)
+├── services/      # Serviços de dados e API calls
+├── store/         # Gerenciamento de estado com Zustand
+├── theme/         # Sistema de temas (cores, tipografia, espaçamentos)
+└── utils/         # Utilitários e helpers
+```
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+## 🎨 Design System
+
+O projeto implementa um design system completo com:
+
+* **Cores**: Paleta de cores consistente para tema escuro
+* **Tipografia**: Sistema de fontes com diferentes pesos e tamanhos
+* **Espaçamentos**: Grid system para layouts consistentes
+* **Componentes**: Biblioteca de componentes reutilizáveis (Box, Text, TouchableOpacityBox)
+* **Ícones**: Integração com Lucide React Native para ícones consistentes
+
+## 🚀 Performance
+
+* **Lazy Loading**: Carregamento sob demanda de imagens e componentes
+* **Memoização**: Componentes otimizados com React.memo e useMemo
+* **Virtual Lists**: FlatList otimizada para grandes listas de filmes
+* **Cache Inteligente**: TanStack Query para cache automático de dados da API
+* **Debounced Search**: Redução de chamadas desnecessárias à API
+
+## 🤝 Contribuindo
+
+1. Faça um fork do projeto
+2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
+3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
+4. Push para a branch (`git push origin feature/AmazingFeature`)
+5. Abra um Pull Request
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+## 🙏 Agradecimentos
+
+- [The Movie Database (TMDB)](https://www.themoviedb.org/) pelos dados dos filmes
+- [React Native Community](https://reactnative.dev/) pela excelente documentação
+- Todos os contribuidores que ajudaram a melhorar este projeto
