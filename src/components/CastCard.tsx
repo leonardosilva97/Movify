@@ -11,7 +11,7 @@ interface CastCardProps {
 }
 
 export function CastCard({cast, onPress}: CastCardProps) {
-  const {colors, spacing, borderRadius} = useAppTheme();
+  const {colors, spacing} = useAppTheme();
 
   const imageUrl = cast.profile_path
     ? `https://image.tmdb.org/t/p/w185${cast.profile_path}`

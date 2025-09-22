@@ -1,5 +1,5 @@
 import React, {useRef, useEffect} from 'react';
-import {ScrollView, Animated, Dimensions, Image} from 'react-native';
+import {ScrollView, Animated, Image} from 'react-native';
 import {Box} from './Box';
 import {Text} from './Text';
 import {TouchableOpacityBox} from './TouchableOpacityBox';
@@ -14,7 +14,6 @@ interface MovieCarouselProps {
   isLoading?: boolean;
 }
 
-const {width: screenWidth} = Dimensions.get('window');
 const CARD_WIDTH = 140;
 const CARD_SPACING = 12;
 

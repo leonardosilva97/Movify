@@ -19,7 +19,7 @@ export function MovieHeader({
   title,
   releaseDate,
   onBack,
-  onSearchPress,
+  onSearchPress: _onSearchPress,
 }: MovieHeaderProps) {
   const theme = useAppTheme();
 

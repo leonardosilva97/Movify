@@ -20,9 +20,9 @@ export function TabView({
   tabs,
   activeTab,
   onTabPress,
-  renderContent,
+  renderContent: _renderContent,
 }: TabViewProps) {
-  const {colors, spacing} = useAppTheme();
+  const {colors} = useAppTheme();
 
   return (
     <Box

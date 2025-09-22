@@ -1,11 +1,10 @@
 import React, {useState} from 'react';
-import {Alert, TouchableWithoutFeedback, View, StyleSheet, Linking, Platform} from 'react-native';
+import {Alert, StyleSheet, Linking} from 'react-native';
 import {Calendar} from 'react-native-calendars';
 import Modal from 'react-native-modal';
 import {Box, Text, TouchableOpacityBox} from './index';
 import {Icon} from './icons';
 import {useAppTheme} from '../hooks';
-import {tmdbService} from '../api/tmdbService';
 import {Movie, MovieStatus} from '../models/movie';
 import RNCalendarEvents from 'react-native-calendar-events';
 import {useToastStore} from '../store/useToastStore';
@@ -21,7 +20,7 @@ interface MovieDetailsActionsProps {
 
 export function MovieDetailsActions({
   movie,
-  movieId,
+  movieId: _movieId,
   isUpdatingStatus,
   onStatusChange,
   onScheduleDate,

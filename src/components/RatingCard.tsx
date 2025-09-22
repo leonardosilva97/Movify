@@ -15,10 +15,10 @@ export function RatingCard({
   source,
   rating,
   maxRating = 10,
-  imdbId,
+  imdbId: _imdbId,
   voteCount,
 }: RatingCardProps) {
-  const {colors, spacing} = useAppTheme();
+  const {colors} = useAppTheme();
 
   const formatVoteCount = (count: number) => {
     if (count >= 1000000) {
@@ -41,7 +41,7 @@ export function RatingCard({
     return 60;
   };
 
-  const formatRating = (rating: number, max: number) => {
+  const formatRating = (rating: number, _max: number) => {
     if (source === 'TMDB') {
       return rating.toFixed(1);
     }

@@ -16,7 +16,7 @@ export function MovieCategoryTabs({
   onFilterChange,
 }: MovieCategoryTabsProps) {
   const theme = useAppTheme();
-  const {data: genres, isLoading} = useGenres();
+  const {data: genres} = useGenres();
 
   // Gêneros principais que queremos mostrar
   const mainGenres = [

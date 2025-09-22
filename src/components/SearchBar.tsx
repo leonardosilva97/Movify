@@ -14,7 +14,7 @@ export function SearchBar({
   errorMessage,
   ...textInputProps
 }: SearchBarProps) {
-  const {colors, spacing, borderRadius, typography} = useAppTheme();
+  const {colors, spacing, typography} = useAppTheme();
 
   return (
     <Box>

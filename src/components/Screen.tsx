@@ -13,8 +13,8 @@ export interface ScreenProps extends Omit<BoxProps, 'backgroundColor'> {
 
 export function Screen({
   children,
-  canGoBack,
-  scrollable,
+  canGoBack: _canGoBack,
+  scrollable: _scrollable,
   backgroundColor = 'background',
   statusBarStyle = 'light-content',
   style,
