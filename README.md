@@ -162,4 +162,4 @@ O projeto implementa um design system completo com:
 
 - [The Movie Database (TMDB)](https://www.themoviedb.org/) pelos dados dos filmes
 - [React Native Community](https://reactnative.dev/) pela excelente documentação
-- Todos os contribuidores que ajudaram a melhorar este projeto
+
